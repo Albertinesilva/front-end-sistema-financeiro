@@ -1,0 +1,26 @@
+<!-- <div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Hello, world!</h1>
+    <h1 class="display-3">{{nome}} tem {{getIdade()}}</h1>
+    <p class="leas">This is a simple hero unit, a simple jumbotron-style component</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out wit</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    Funcionário adicionado: <strong>{{nome}}</strong>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input type="text" class="form-control" #nomeInput>
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="adicionar(nomeInput.value)">Adicionar</button>
+
+</div>
