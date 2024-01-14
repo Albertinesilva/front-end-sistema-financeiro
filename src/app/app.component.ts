@@ -1,28 +1,56 @@
 import { Component } from '@angular/core';
 
+interface Funcionario {
+  id: number
+  nome: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  nome = ''
+  ultimoId = 0;
+  nome = 'Albert';
   idade = 43;
+  adicionado = false;
+  funcionarios: Funcionario[] = [];
 
-  getIdade(){
+  getIdade() {
     return this.idade;
   }
 
-  adicionar(nome: string) {
-    this.nome = nome;
+  adicionar() {
+    console.log(`Adicionando ${this.nome}`);
+    this.adicionado = true;
+
+    this.funcionarios.push({
+      id: ++this.ultimoId,
+      nome: this.nome
+    });
   }
 
-  // alterarNome(event: any) {
-  //   // console.log(event);
-  //   this.nome = event.target.value;
-  // }
+// adicionar() {
+//   console.log(`Adicionando ${this.nome}`);
+//   this.adicionado = true;
 
-  // alterarNome(event: any) {
-  //   console.log(event.target.value);
-  // }
+//   const numero = Math.round(Math.random() * 100);
+//   this.nome = 'Albert ' + numero;
+
+// }
+
+// adicionar(nome: string) {
+//   this.nome = nome;
+// }
+
+// alterarNome(event: any) {
+//   // console.log(event);
+//   this.nome = event.target.value;
+// }
+
+// alterarNome(event: any) {
+//   console.log(event.target.value);
+// }
+
 }
