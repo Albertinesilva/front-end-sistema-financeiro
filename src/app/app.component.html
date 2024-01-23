@@ -33,7 +33,7 @@
     Funcionário adicionado: <strong>{{nome}}</strong>
   </div>
 
-  <!-- Outra forma de fazer -->
+  <!-- Outra forma de fazer, porem aparece na inspeção do navegador as informações-->
   <!-- <div class="alert alert-success" role="alert" [hidden]="!adicionado">
     Funcionário adicionado: <strong>{{nome}}</strong>
   </div> -->
@@ -52,7 +52,9 @@
 
   <div class="row" style="margin-top: 20px">
     <div class="col-2" *ngFor="let funcionario of funcionarios">
-      <app-funcionario-card></app-funcionario-card>
+      <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{funcionario.id}}.jpg" alt="">
+      <div class="card-block">{{funcionario.nome}}</div>
+      <!-- <app-funcionario-card></app-funcionario-card> -->
     </div>
   </div>
 
