@@ -1,19 +1,25 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appCampoColorido]'
+  selector: '[appCampoColorido]',
+  exportAs: 'campoColorido'
 })
 export class CampoColoridoDirective {
 
-  constructor(
-    private elementRef: ElementRef,
-    private renderer: Renderer2
-  ) {
-    this.renderer.setStyle(
-      this.elementRef.nativeElement,
-      'background-color',
-      'yellow'
-    );
+  @Input('appCampoColorido') cor = 'gray';
+
+  @HostBinding('style.backgroundColor') corDeFundo: string = "transparent";
+
+  @HostListener('focus') colorir() {
+    this.corDeFundo = this.cor;
+    // this.renderer.setStyle(
+    //   this.elementRef.nativeElement,
+    //   'background-color',
+    //   'yellow'
+    // );
   }
 
+  @HostListener('blur') descolorir() {
+    this.corDeFundo = 'transparent';
+  }
 }
