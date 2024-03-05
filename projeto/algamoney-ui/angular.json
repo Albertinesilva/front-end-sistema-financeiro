@@ -6,15 +6,9 @@
     "algamoney-ui": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
+        "@schematics/angular:component": {},
+        "@schematics/angular:directive": {},
+        "@schematics/angular:pipe": {}
       },
       "root": "",
       "sourceRoot": "src",

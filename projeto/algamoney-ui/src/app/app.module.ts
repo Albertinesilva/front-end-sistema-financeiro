@@ -5,10 +5,15 @@ import { AppComponent } from './app.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { TooltipModule } from 'primeng/tooltip';
+import { LancamentoPesquisaComponent } from './components/lancamento-pesquisa/lancamento-pesquisa.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LancamentoPesquisaComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +21,8 @@ import { TableModule } from 'primeng/table';
     ButtonModule,
     InputTextModule,
     TabViewModule,
-    TableModule
+    TableModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
