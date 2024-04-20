@@ -7,28 +7,43 @@
 
   <br>
 
-  <div *ngIf="usuarioForm.invalid" class="alert alert-danger">
+  <div *ngIf="usuarioForm.invalid && usuarioForm.dirty" class="alert alert-danger">
     Preencha todos os campos corretamente
-
   </div>
 
   <form autocomplete="off" #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)">
     <div class="mb-3">
       <label class="form-label">Nome</label>
-      <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.nome" required minlength="10">
+      <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.nome" required minlength="10"
+        #nome="ngModel">
+
+      <!-- Touched: {{ nome.touched }} <br>
+        Dirty: {{ nome.dirty }} <br>
+        Pristine: {{ nome.pristine }} <br>
+        Valid: {{ nome.valid }} <br>
+        Invalid: {{ nome.invalid }} <br>
+        Errors: {{ nome.errors | json }} <br> -->
+
+      <div *ngIf="nome.hasError('required') && nome.touched">O campo nome é obrigatório</div>
+      <div *ngIf="nome.hasError('minlength') && nome.touched">Deve ter no mínimo 10 caracteres</div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">E-mail</label>
-      <input type="text" class="form-control" name="email" [(ngModel)]="cliente.email" required email>
+      <input type="text" class="form-control" name="emailAddress" [(ngModel)]="cliente.email" required email
+        #email="ngModel">
+
+      <div *ngIf="email.invalid && email.touched">Informe um e-mail válido</div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Profissão</label>
-      <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required>
+      <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required #profissao="ngModel">
         <option value="">Selecione</option>
         <option *ngFor="let profissao of profissoes" [value]="profissao">{{ profissao }}</option>
       </select>
+
+      <div *ngIf="profissao.invalid && profissao.touched">Informe uma profissão</div>
     </div>
 
     <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.valid">Salvar</button>
