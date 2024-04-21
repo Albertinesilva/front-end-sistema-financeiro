@@ -25,7 +25,8 @@
         Errors: {{ nome.errors | json }} <br> -->
 
       <div *ngIf="nome.hasError('required') && nome.touched" class="invalid-feedback">O campo nome é obrigatório</div>
-      <div *ngIf="nome.hasError('minlength') && nome.touched" class="invalid-feedback">Deve ter no mínimo 10 caracteres</div>
+      <div *ngIf="nome.hasError('minlength') && nome.touched" class="invalid-feedback">Deve ter no mínimo 10 caracteres
+      </div>
     </div>
 
     <div class="mb-3">
