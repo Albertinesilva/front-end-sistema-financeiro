@@ -5,6 +5,15 @@ body {
   color: #404c51;
 }
 
+a{
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
 label {
   font-weight: bold;
 }
@@ -76,3 +85,18 @@ label {
     margin: 1px;
   }
 }
+
+/* .col-valor {
+  width: 120px;
+  text-align: right;
+}
+
+.col-data {
+  width: 120px;
+  text-align: center;
+}
+
+.col-acoes {
+  width: 90px;
+  text-align: center;
+} */
