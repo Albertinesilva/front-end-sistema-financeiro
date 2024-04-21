@@ -30,5 +30,6 @@ export class AppComponent {
 
     console.log(form);
     // console.log(this.cliente);
+    this.cliente = new Cliente();
   }
 }

@@ -15,7 +15,7 @@
     <div class="mb-3">
       <label class="form-label">Nome</label>
       <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.nome" required minlength="10"
-        #nome="ngModel">
+        #nome="ngModel" [class.is-invalid]="nome.invalid && nome.touched">
 
       <!-- Touched: {{ nome.touched }} <br>
         Dirty: {{ nome.dirty }} <br>
@@ -24,28 +24,30 @@
         Invalid: {{ nome.invalid }} <br>
         Errors: {{ nome.errors | json }} <br> -->
 
-      <div *ngIf="nome.hasError('required') && nome.touched">O campo nome é obrigatório</div>
-      <div *ngIf="nome.hasError('minlength') && nome.touched">Deve ter no mínimo 10 caracteres</div>
+      <div *ngIf="nome.hasError('required') && nome.touched" class="invalid-feedback">O campo nome é obrigatório</div>
+      <div *ngIf="nome.hasError('minlength') && nome.touched" class="invalid-feedback">Deve ter no mínimo 10 caracteres</div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">E-mail</label>
       <input type="text" class="form-control" name="emailAddress" [(ngModel)]="cliente.email" required email
-        #email="ngModel">
+        #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
 
-      <div *ngIf="email.invalid && email.touched">Informe um e-mail válido</div>
+      <div *ngIf="email.invalid && email.touched" class="invalid-feedback">Informe um e-mail válido</div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Profissão</label>
-      <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required #profissao="ngModel">
+      <select class="form-control" name="profissao"
+        [(ngModel)]="cliente.profissao" required #profissao="ngModel"
+        [class.is-invalid]="profissao.invalid && profissao.touched">
         <option value="">Selecione</option>
-        <option *ngFor="let profissao of profissoes" [value]="profissao">{{ profissao }}</option>
+        <option *ngFor="let profissao of profissoes"
+          [value]="profissao">{{ profissao }}</option>
       </select>
-
-      <div *ngIf="profissao.invalid && profissao.touched">Informe uma profissão</div>
+      
+      <div *ngIf="profissao.invalid && profissao.touched" class="invalid-feedback">Informe uma profissão</div>
     </div>
-
     <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.valid">Salvar</button>
   </form>
 
