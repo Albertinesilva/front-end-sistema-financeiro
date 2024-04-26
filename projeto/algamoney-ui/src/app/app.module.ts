@@ -12,12 +12,14 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
 
 import { AppComponent } from './app.component';
 import { LancamentoPesquisaComponent } from './components/lancamento-pesquisa/lancamento-pesquisa.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LancamentoCadastroComponent } from './components/lancamento-cadastro/lancamento-cadastro.component';
 import { PessoasPesquisaComponent } from './components/pessoas-pesquisa/pessoas-pesquisa.component';
+import { PessoaCadastroComponent } from './components/pessoa-cadastro/pessoa-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { PessoasPesquisaComponent } from './components/pessoas-pesquisa/pessoas-
     LancamentoPesquisaComponent,
     NavbarComponent,
     LancamentoCadastroComponent,
-    PessoasPesquisaComponent
+    PessoasPesquisaComponent,
+    PessoaCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { PessoasPesquisaComponent } from './components/pessoas-pesquisa/pessoas-
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    InputNumberModule
+    InputNumberModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
