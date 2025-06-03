@@ -24,6 +24,8 @@ import { LancamentoCadastroComponent } from './components/lancamento-cadastro/la
 import { PessoasPesquisaComponent } from './components/pessoas-pesquisa/pessoas-pesquisa.component';
 import { PessoaCadastroComponent } from './components/pessoa-cadastro/pessoa-cadastro.component';
 import { MessageComponent } from './components/message/message.component';
+import { LancamentosGridComponent } from './components/lancamentos-grid/lancamentos-grid.component';
+import { PessoasGridComponent } from './components/pessoas-grid/pessoas-grid.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MessageComponent } from './components/message/message.component';
     LancamentoCadastroComponent,
     PessoasPesquisaComponent,
     PessoaCadastroComponent,
-    MessageComponent
+    MessageComponent,
+    LancamentosGridComponent,
+    PessoasGridComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,7 @@ import { MessageComponent } from './components/message/message.component';
     InputNumberModule,
     InputMaskModule,
     MessageModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

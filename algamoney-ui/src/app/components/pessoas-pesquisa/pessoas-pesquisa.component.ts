@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Pessoa } from '../../core/interface/Pessoa';
 
 @Component({
   selector: 'app-pessoas-pesquisa',
   templateUrl: './pessoas-pesquisa.component.html',
   styleUrls: ['./pessoas-pesquisa.component.css']
 })
-export class PessoasPesquisaComponent implements OnInit {
+export class PessoasPesquisaComponent {
 
-  constructor() { }
+  pessoas: Pessoa[] = [
 
-  ngOnInit(): void {
-  }
-
-  pessoas = [
     { nome: 'Manoel Pinheiro', cidade: 'Uberlândia', estado: 'MG', ativo: true },
     { nome: 'Sebastião da Silva', cidade: 'São Paulo', estado: 'SP', ativo: false },
     { nome: 'Carla Souza', cidade: 'Florianópolis', estado: 'SC', ativo: true },
