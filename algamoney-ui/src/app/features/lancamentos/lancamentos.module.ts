@@ -18,6 +18,7 @@ import { LancamentoPesquisaComponent } from './lancamento-pesquisa/lancamento-pe
 import { LancamentosGridComponent } from './lancamentos-grid/lancamentos-grid.component';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,10 @@ import { TableModule } from 'primeng/table';
     SelectButtonModule,
     DropdownModule,
     InputNumberModule,
-    // MessageModule,
-    // CurrencyMaskModule,
+    MessageModule,
+    CurrencyMaskModule,
+
+    SharedModule
   ],
   exports: [
     LancamentoCadastroComponent,
