@@ -18,40 +18,22 @@ import { MessageModule } from 'primeng/message';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { PessoasPesquisaComponent } from './components/pessoas-pesquisa/pessoas-pesquisa.component';
-import { PessoaCadastroComponent } from './components/pessoa-cadastro/pessoa-cadastro.component';
 import { MessageComponent } from './components/message/message.component';
-import { PessoasGridComponent } from './components/pessoas-grid/pessoas-grid.component';
 import { LancamentosModule } from './features/lancamentos/lancamentos.module';
+import { PessoasModule } from './features/pessoas/pessoas.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PessoasPesquisaComponent,
-    PessoaCadastroComponent,
-    MessageComponent,
-    PessoasGridComponent
+    MessageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
 
     LancamentosModule,
-
-    ButtonModule,
-    InputTextModule,
-    TabViewModule,
-    TableModule,
-    TooltipModule,
-    InputTextareaModule,
-    CalendarModule,
-    SelectButtonModule,
-    DropdownModule,
-    InputNumberModule,
-    InputMaskModule,
-    MessageModule,
+    PessoasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

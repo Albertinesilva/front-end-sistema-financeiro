@@ -39,8 +39,8 @@ import { TableModule } from 'primeng/table';
     SelectButtonModule,
     DropdownModule,
     InputNumberModule,
-    MessageModule,
-    CurrencyMaskModule,
+    // MessageModule,
+    // CurrencyMaskModule,
   ],
   exports: [
     LancamentoCadastroComponent,

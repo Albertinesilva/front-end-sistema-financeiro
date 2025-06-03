@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Pessoa } from '../../core/interface/Pessoa';
+import { Pessoa } from '../../../core/interface/Pessoa';
 
 @Component({
   selector: 'app-pessoas-pesquisa',
