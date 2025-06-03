@@ -1,4 +1,4 @@
-<p-table [value]="pessoas" [rows]="5" [paginator]="true" responsiveLayout="scroll">
+<p-table [value]="pessoas" [rows]="5" [paginator]="true" responsiveLayout="scroll" [rowsPerPageOptions]="[2, 5, 10]">
   <ng-template pTemplate="header">
     <tr>
       <th>Nome</th>
@@ -20,8 +20,8 @@
         </a>
       </td>
       <td class="col-acoes">
-        <button pButton icon="pi pi-pencil" class="p-button-text" pTooltip="Editar" tooltipPosition="top"></button>
-        <button pButton icon="pi pi-trash" class="p-button-text" pTooltip="Excluir" tooltipPosition="top"></button>
+        <button pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></button>
+        <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
       </td>
     </tr>
   </ng-template>

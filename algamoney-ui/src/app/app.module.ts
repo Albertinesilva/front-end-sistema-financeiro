@@ -15,34 +15,31 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { MessageModule } from 'primeng/message';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { AppComponent } from './app.component';
-import { LancamentoPesquisaComponent } from './components/lancamento-pesquisa/lancamento-pesquisa.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LancamentoCadastroComponent } from './components/lancamento-cadastro/lancamento-cadastro.component';
 import { PessoasPesquisaComponent } from './components/pessoas-pesquisa/pessoas-pesquisa.component';
 import { PessoaCadastroComponent } from './components/pessoa-cadastro/pessoa-cadastro.component';
 import { MessageComponent } from './components/message/message.component';
-import { LancamentosGridComponent } from './components/lancamentos-grid/lancamentos-grid.component';
 import { PessoasGridComponent } from './components/pessoas-grid/pessoas-grid.component';
+import { LancamentosModule } from './features/lancamentos/lancamentos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LancamentoPesquisaComponent,
     NavbarComponent,
-    LancamentoCadastroComponent,
     PessoasPesquisaComponent,
     PessoaCadastroComponent,
     MessageComponent,
-    LancamentosGridComponent,
     PessoasGridComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+
+    LancamentosModule,
+
     ButtonModule,
     InputTextModule,
     TabViewModule,
@@ -55,7 +52,6 @@ import { PessoasGridComponent } from './components/pessoas-grid/pessoas-grid.com
     InputNumberModule,
     InputMaskModule,
     MessageModule,
-    CurrencyMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
